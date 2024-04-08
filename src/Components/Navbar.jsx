@@ -88,6 +88,7 @@ function NavList() {
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
+          
           {openNav ? (
             <XMarkIcon className="h-6 w-6" strokeWidth={2} />
           ) : (

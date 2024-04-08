@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import GridComp from "../Components/Gridcomp"
 
 const HomePage = () => {

@@ -1,15 +1,9 @@
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Typography,
-    Tooltip,
-  } from "@material-tailwind/react";
+import ProfileCard from "../Components/ProfileCard"
   
 const DocsPage = () => {
     return (
         <div>
+            <ProfileCard />
             <h1>Halaman Docs</h1>
         </div>
     )

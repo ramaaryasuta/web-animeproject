@@ -1,11 +1,14 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Button } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 import ImagePlacehoderSkeleton from "./SkeletonCard";
+import { malIdContext } from "../App";
 
 const GridComp = (props) => {
   const navigate = useNavigate();
+
+  const malId = useContext(malIdContext);
 
   return (
     <>
@@ -40,7 +43,10 @@ const GridComp = (props) => {
                       <p className="mb-4 text-gray-500 line-clamp-3 text-sm">
                         {data.synopsis}
                       </p>
-                      <Button color="blue" onClick={() => navigate(`/detail`)}>Read More</Button>
+                      <Button color="blue" onClick={() => {
+                        malId.setMalId(data.mal_id);
+                        navigate("/detail");
+                      }}>Read More</Button>
                     </div>
                   </div>
                 </li>
